@@ -8,7 +8,10 @@
 
 @font-face {
   font-family: "Gyate";
-  src: url("./assets/gyate-luminescence.ttf");
+  src: url("./assets/gyate-luminescence.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
 }
 
 * {
@@ -29,18 +32,20 @@ body {
   width: min(430px, 100vw);
   min-height: 100vh;
   background: #0879b5;
-  background-image: linear-gradient(180deg, rgba(4, 49, 88, 0.04), rgba(4, 49, 88, 0.62)), url("./assets/island-illustration-bg.jpeg");
-  background-size: cover;
-  background-position: center top;
-  background-attachment: fixed;
 }
 
 .cover {
-  min-height: 92vh;
+  width: 100%;
+  aspect-ratio: 816 / 1456;
+  min-height: 0;
   padding: 36px 22px 28px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-image: linear-gradient(180deg, rgba(4, 49, 88, 0.04), rgba(4, 49, 88, 0.42)), url("./assets/island-illustration-bg.jpeg");
+  background-size: 100% 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 
 .cover-meta {
@@ -54,12 +59,12 @@ body {
   margin-top: 30px;
   color: rgba(255, 255, 255, 0.46);
   font-family: "Gyate", Georgia, serif;
-  font-size: 98px;
+  font-size: clamp(76px, 22vw, 94px);
   line-height: 0.86;
   font-weight: 400;
   letter-spacing: 2px;
   text-align: center;
-  transform: scaleX(1.12);
+  transform: scaleX(0.94);
   transform-origin: center center;
   text-shadow: 0 6px 22px rgba(0, 58, 96, 0.28);
 }

@@ -1,4 +1,4 @@
-const cacheName = 'hainan-trip-v7'
+const cacheName = 'hainan-trip-v8'
 const assets = [
   './',
   './index.html',
