@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0879b5">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="海南假期">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./assets/app-icon.svg">
+  <title>海南假期</title>
+  <link rel="stylesheet" href="./preview.css">
+</head>
+<body>
+  <main class="phone">
+    <section class="cover">
+      <div class="cover-meta">
+        <span>7月12日 - 7月19日</span>
+      </div>
+      <div class="cover-word">HAINAN</div>
+      <div class="cover-copy">
+        <p>三亚 7.12-7.15，万宁 7.15-7.19，19号白天回三亚，晚上飞北京。</p>
+      </div>
+    </section>
+
+    <section class="story">
+      <div class="story-head">
+        <span>TRIP LINE</span>
+        <h2>时间线</h2>
+        <p>点开每天，可以看更细的安排。</p>
+      </div>
+
+      <div id="timeline"></div>
+
+      <section class="bottom-links">
+        <a href="./preview-places.html"><h3>探店</h3><p>咖啡、买手店、餐厅</p></a>
+        <a href="./preview-budget.html" id="budgetEntry">
+          <h3>旅行预算</h3>
+          <p>边玩边记账</p>
+        </a>
+      </section>
+    </section>
+  </main>
+
+  <script src="./preview.js"></script>
+  <script>
+    if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+      navigator.serviceWorker.register('./sw.js')
+    }
+  </script>
+</body>
+</html>

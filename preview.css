@@ -1,0 +1,369 @@
+:root {
+  color-scheme: light;
+  --ink: #0c2333;
+  --muted: rgba(14, 37, 53, 0.66);
+  --blue: #0b7cb4;
+  --orange: #f7a23b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #e8f5f8;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+}
+
+.phone {
+  width: min(430px, 100vw);
+  min-height: 100vh;
+  background: #0879b5;
+  background-image: linear-gradient(180deg, rgba(4, 49, 88, 0.04), rgba(4, 49, 88, 0.62)), url("./assets/island-illustration-bg.jpeg");
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+}
+
+.cover {
+  min-height: 92vh;
+  padding: 36px 22px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cover-meta {
+  display: block;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.cover-word {
+  margin-top: 30px;
+  color: rgba(255, 255, 255, 0.46);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 98px;
+  line-height: 0.86;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center;
+  transform: scaleX(1.12);
+  transform-origin: center center;
+  text-shadow: 0 6px 22px rgba(0, 58, 96, 0.28);
+}
+
+.cover-copy p {
+  max-width: 330px;
+  margin: 12px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 15px;
+  line-height: 1.55;
+  font-weight: 650;
+}
+
+.story {
+  min-height: 100vh;
+  padding: 24px 16px 38px;
+  border-radius: 28px 28px 0 0;
+  background: rgba(244, 250, 251, 0.48);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 -18px 46px rgba(2, 50, 86, 0.2);
+}
+
+.story-head {
+  padding: 0 4px 18px;
+}
+
+.story-head span {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+h2 {
+  margin: 8px 0 0;
+  color: var(--ink);
+  font-size: 28px;
+  letter-spacing: 0;
+}
+
+.story-head p {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.timeline-card {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 8px;
+  min-height: 92px;
+}
+
+.timeline-pin {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.pin-dot {
+  width: 18px;
+  height: 18px;
+  margin-top: 31px;
+  border: 3px solid rgba(255, 255, 255, 0.94);
+  border-radius: 999px;
+  background: var(--orange);
+  box-shadow: 0 4px 12px rgba(247, 162, 59, 0.38);
+}
+
+.pin-line {
+  position: absolute;
+  top: 56px;
+  bottom: 0;
+  left: 20px;
+  width: 8px;
+  background-image: radial-gradient(circle, rgba(8, 93, 132, 0.38) 2px, transparent 2.8px);
+  background-size: 7px 13px;
+  background-repeat: repeat-y;
+  transform: rotate(-1.5deg);
+}
+
+.timeline-card:last-child .pin-line {
+  display: none;
+}
+
+.timeline-content,
+.bottom-links article,
+.bottom-links a,
+.detail-panel {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 20px;
+  box-shadow: 0 10px 26px rgba(18, 72, 99, 0.08);
+}
+
+.timeline-content {
+  position: relative;
+  margin-bottom: 12px;
+  padding: 13px 4px;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.timeline-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.city-label {
+  display: inline-block;
+  min-width: 54px;
+  margin-bottom: 5px;
+  padding: 3px 9px 4px;
+  color: rgba(8, 82, 118, 0.76);
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1;
+  border: 1px dashed rgba(255, 255, 255, 0.76);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.24);
+  transform: rotate(-1deg);
+}
+
+.timeline-trigger {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 12px;
+  color: var(--ink);
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.timeline-trigger span:last-child {
+  color: rgba(14, 37, 53, 0.58);
+}
+
+.timeline-trigger i {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  margin-left: 4px;
+  color: rgba(7, 99, 143, 0.72);
+  font-size: 24px;
+  font-style: normal;
+  font-family: "Marker Felt", "Comic Sans MS", -apple-system, BlinkMacSystemFont, sans-serif;
+  opacity: 0.9;
+  transform: rotate(-7deg);
+}
+
+h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.35;
+}
+
+.timeline-title {
+  display: block;
+  margin-top: 8px;
+  color: var(--ink);
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.timeline-detail {
+  display: none;
+  margin-top: 8px;
+  padding: 3px 0 8px;
+}
+
+.timeline-card.open .timeline-detail {
+  display: block;
+}
+
+.timeline-drive,
+.timeline-summary,
+.bottom-links p,
+.detail-panel p {
+  display: block;
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.48;
+}
+
+.hotel-card {
+  min-height: 108px;
+  margin-top: 10px;
+  padding: 14px;
+  overflow: hidden;
+  border-radius: 22px;
+  background-image:
+    linear-gradient(135deg, rgba(7, 39, 61, 0.72), rgba(7, 98, 143, 0.18)),
+    url("./assets/island-illustration-bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 14px 28px rgba(5, 48, 77, 0.16);
+}
+
+.hotel-sanya {
+  background-image:
+    linear-gradient(135deg, rgba(7, 39, 61, 0.7), rgba(7, 98, 143, 0.08)),
+    url("./assets/sanya-homestay.jpg");
+  background-position: center;
+}
+
+.hotel-wanning {
+  background-image:
+    linear-gradient(135deg, rgba(7, 39, 61, 0.66), rgba(7, 98, 143, 0.05)),
+    url("./assets/wanning-homestay.jpg");
+  background-position: center;
+}
+
+.hotel-card span,
+.hotel-card strong,
+.hotel-card p {
+  display: block;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 2px 12px rgba(0, 36, 58, 0.36);
+}
+
+.hotel-card span {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.hotel-card strong {
+  max-width: 260px;
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.hotel-card p {
+  margin: 7px 0 0;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.timeline-drive {
+  color: rgba(9, 71, 104, 0.78);
+  font-weight: 750;
+}
+
+.plan-list {
+  margin-top: 11px;
+  padding: 10px 12px;
+  border: 1px dashed rgba(8, 96, 137, 0.28);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.23);
+}
+
+.plan-list p {
+  margin: 8px 0 0;
+  color: rgba(14, 37, 53, 0.68);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.plan-list p:first-child {
+  margin-top: 0;
+}
+
+.plan-list b {
+  display: inline-block;
+  min-width: 68px;
+  color: var(--ink);
+}
+
+.bottom-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 34px;
+}
+
+.bottom-links a {
+  min-height: 64px;
+  padding: 11px 12px;
+  text-decoration: none;
+  border-style: dashed;
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.detail-panel {
+  display: none;
+  margin-top: 12px;
+  padding: 15px;
+}
+
+.detail-panel.active {
+  display: block;
+}
+
+.detail-panel h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.detail-row {
+  padding: 11px 0;
+  border-top: 1px dashed rgba(10, 101, 142, 0.2);
+}
+
+.detail-row:first-of-type {
+  border-top: 0;
+}

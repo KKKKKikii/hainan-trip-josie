@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0879b5">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <title>旅行预算</title>
+  <link rel="stylesheet" href="./preview-subpage.css">
+</head>
+<body>
+  <main class="subpage">
+    <a class="back" href="./index.html">返回时间线</a>
+    <section class="receipt">
+      <div class="receipt-head">
+        <span>HAINAN / TRIP RECEIPT</span>
+        <h1>Travel Bill</h1>
+        <p>- MEMORY RECEIPT -</p>
+      </div>
+
+      <section class="receipt-meta">
+        <div><span>DATE</span><b>2026年7月12日-19日</b></div>
+        <div><span>PEOPLE</span><b>3人</b></div>
+        <div><span>ROUTE</span><b>三亚 / 万宁</b></div>
+      </section>
+
+      <section class="budget-hero">
+        <span>SPENT / BUDGET</span>
+        <strong id="budgetTotal">¥0 / ¥0</strong>
+        <p id="budgetHint">开始记录每一笔花费。</p>
+      </section>
+
+      <section id="budgetList"></section>
+
+      <section class="add-panel">
+        <h2>新增一笔</h2>
+        <select id="entryCategory"></select>
+        <input id="entryAmount" type="number" placeholder="金额">
+        <input id="entryNote" placeholder="备注，例如椰子鸡 / 停车费">
+        <button id="addEntry">记一笔</button>
+      </section>
+
+      <section class="add-panel add-group-panel">
+        <h2>新增大类</h2>
+        <input id="groupName" placeholder="分类名称，例如门票 / 药品">
+        <input id="groupPlan" type="number" placeholder="预算金额">
+        <button id="addGroup">加到预算</button>
+      </section>
+
+      <section class="receipt-foot">
+        <div><span>ITEM GROUPS</span><b id="groupCount">0</b></div>
+        <div><span>TOTAL ENTRIES</span><b id="entryCount">0</b></div>
+        <div><span>CONFIRMED</span><b id="confirmedTotal">¥0</b></div>
+        <p>边玩边记，别让钱偷偷溜走。</p>
+      </section>
+    </section>
+  </main>
+  <script src="./preview-budget.js"></script>
+</body>
+</html>

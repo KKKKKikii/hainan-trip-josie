@@ -1,0 +1,18 @@
+{
+  "name": "海南假期",
+  "short_name": "海南假期",
+  "start_url": "./preview.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0879b5",
+  "theme_color": "#0879b5",
+  "description": "三亚万宁旅行行程、预约和预算记账",
+  "icons": [
+    {
+      "src": "./assets/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
