@@ -1,4 +1,4 @@
-const cacheName = 'hainan-trip-v6'
+const cacheName = 'hainan-trip-v7'
 const assets = [
   './',
   './index.html',
@@ -16,6 +16,7 @@ const assets = [
   './assets/island-illustration-bg.jpeg',
   './assets/sanya-homestay.jpg',
   './assets/wanning-homestay.jpg',
+  './assets/gyate-luminescence.ttf',
   './assets/app-icon.svg'
 ]
 
